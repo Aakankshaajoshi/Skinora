@@ -1,0 +1,46 @@
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Frontend
+node_modules/
+dist/
+.vite/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Downloaded datasets and caches
+data/
+datasets/
+.cache/
+huggingface_cache/
+**/train-*.parquet
+
+# Training outputs and temporary files
+*.log
+*.tmp
+runs/
+outputs/
+
+# IDE and operating system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Model checkpoints
+*.pth
+*.pt
+*.ckpt

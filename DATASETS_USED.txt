@@ -1,0 +1,25 @@
+SKINORA DATASETS AND MODEL WEIGHTS
+
+ACTUALLY USED BY THE TRAINING PIPELINE
+1) ACNE04 — primary fine-tuning dataset
+   - 1,457 facial acne images
+   - Four severity classes: mild, moderate, severe, very_severe
+   - Source: https://huggingface.co/datasets/Layered-Labs/ACNE04
+   - License/terms: academic/research use only; not for commercial use without permission.
+
+2) ImageNet-1K — transfer-learning pretraining
+   - Used indirectly through torchvision's pretrained ResNet50 weights.
+   - The dataset itself is not bundled in this project; weights download when training starts.
+   - Source/model weights: https://pytorch.org/vision/stable/models/generated/torchvision.models.resnet50.html
+
+OPTIONAL ADDITIONAL DATA
+- The training script accepts more acne images using --extra-data-dir only when labels
+  genuinely match the same four ACNE04 severity classes and licensing permits it.
+- Do not merge HAM10000, ISIC, or Fitzpatrick17k labels directly into acne severity:
+  they contain different image modalities and/or target labels. They are not used in
+  this model because that would create a mismatched classification task.
+
+IMPORTANT
+- The zip does not include trained weights. Run the training script to create
+  backend/models/acne_resnet50.pth and backend/models/training_metrics.json.
+- Do not claim a trained ResNet50 prediction is available before this checkpoint exists.

@@ -1,0 +1,20 @@
+{
+  "model": "ResNet50",
+  "primary_dataset": "ACNE04",
+  "pretraining": "ImageNet-1K",
+  "classes": [
+    "mild",
+    "moderate",
+    "severe",
+    "very_severe"
+  ],
+  "acne04_train_images": 990,
+  "acne04_validation_images": 175,
+  "acne04_test_images": 292,
+  "extra_compatible_train_images": 0,
+  "extra_compatible_validation_images": 0,
+  "best_validation_accuracy": 0.7429,
+  "test_accuracy": 0.6267,
+  "test_loss": 0.843,
+  "checkpoint": "C:\\Users\\Aakanksha\\Downloads\\Skinora\\backend\\models\\acne_resnet50.pth"
+}
